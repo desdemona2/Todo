@@ -5,4 +5,9 @@
     <string name="forgot_password">forgot password?</string>
     <string name="autologin">autologin</string>
     <string name="login">Login</string>
+    <string name="new_user_register">New User? Register</string>
+    <string name="pending">not implemented yet</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="dialog_register">You won\'t be able to change this username and password. Are you sure you want to go with this</string>
 </resources>

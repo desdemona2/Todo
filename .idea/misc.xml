@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout-night/activity_login.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout-night/activity_register.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.334375" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/item_view.xml" value="0.35052083333333334" />
+        <entry key="app/src/main/res/layout/todo_list.xml" value="0.353125" />
       </map>
     </option>
   </component>

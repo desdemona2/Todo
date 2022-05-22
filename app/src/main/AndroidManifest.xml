@@ -14,7 +14,10 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".TodoList"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
