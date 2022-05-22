@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
         if (check(user, pass)) {
             // move user to the actual notes page
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+
+            if (autologin.isChecked()) {
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putBoolean("login", true);
+                editor.apply();
+            }
+
             Intent intent = new Intent(MainActivity.this, TodoList.class);
             startActivity(intent);
         } else {
