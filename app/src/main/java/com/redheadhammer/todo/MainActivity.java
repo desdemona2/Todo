@@ -29,30 +29,46 @@ public class MainActivity extends AppCompatActivity {
         if (sharedPref.getBoolean("isFirstRun", true)) {
             Intent intent = new Intent(MainActivity.this, Register.class);
             startActivity(intent);
-        }
-
-        /* auto-login if set in past */
-        if (sharedPref.getString("login", null) != null) {
+        } else if (sharedPref.getBoolean("login", false)) {
+            /* auto-login if set true in past */
             Intent intent = new Intent(MainActivity.this, TodoList.class);
             startActivity(intent);
         }
+        /* attach views with their objects */
+        setObjects();
 
-        /* setting view objects */
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        autologin = findViewById(R.id.autologin);
-        submit = findViewById(R.id.submit);
-        register = findViewById(R.id.register);
+        submit.setOnClickListener(this::onClick);
+    }
 
-        /* get values from login screen */
+    public void onClick(View view) {
         String user = String.valueOf(username.getText());
         String pass = String.valueOf(password.getText());
 
-        register.setOnClickListener(this::onClick);
+        // check if input user-pass is correct
+        if (check(user, pass)) {
+            // move user to the actual notes page
+            Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, TodoList.class);
+            startActivity(intent);
+        } else {
+            username.setError("incorrect username or password");
 
+            Toast.makeText(this, R.string.wrong_user, Toast.LENGTH_SHORT).show();
+        }
     }
 
-    private void onClick(View view) {
-        Toast.makeText(MainActivity.this, R.string.pending, Toast.LENGTH_SHORT).show();
+    private void setObjects(){
+        /* setting view objects */
+        username = this.findViewById(R.id.username);
+        password = this.findViewById(R.id.password);
+        autologin = this.findViewById(R.id.autologin);
+        submit = this.findViewById(R.id.submit);
+        register = this.findViewById(R.id.register);
+    }
+
+    private boolean check(String user, String pass){
+        String real_user = sharedPref.getString("userName", "");
+        String real_pass = sharedPref.getString("password", "");
+        return real_pass.equals(pass) && real_user.equals(user);
     }
 }

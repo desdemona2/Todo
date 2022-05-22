@@ -11,4 +11,10 @@ public class TodoList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.todo_list);
     }
+
+    @Override
+    public void onBackPressed() {
+        // will clear the back stack so back press will close the application
+        finishAffinity();
+    }
 }

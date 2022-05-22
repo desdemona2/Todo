@@ -10,4 +10,5 @@
     <string name="register">Register</string>
     <string name="confirm_password">confirm password</string>
     <string name="dialog_register">You won\'t be able to change this username and password. Are you sure you want to go with this</string>
+    <string name="wrong_user">username or password entered is wrong</string>
 </resources>
