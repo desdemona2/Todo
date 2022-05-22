@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundSquare">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="CornerCut">
+        <item name="cornerSize">30%</item>
+        <item name="cornerFamily"> cut</item>
+    </style>
+
+    <style name="DiamondCut">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="SpecificCornerCut">
+        <item name="cornerSizeTopRight">20%</item>
+        <item name="cornerSizeBottomLeft">20%</item>
+        <item name="cornerFamily">cut</item>
+    </style>
+
+    <style name="SpecificCornerCurve">
+        <item name="cornerSizeTopRight">30%</item>
+        <item name="cornerSizeBottomLeft">30%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+</resources>
