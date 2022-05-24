@@ -54,7 +54,7 @@ public class CustomDialogFragment extends DialogFragment {
                 int size = itemList.size();
                 FileHelper.writeData(itemList, context);
                 adapter.notifyItemInserted(size-1);
-                dismiss();
+                this.dismiss();
             }
         });
 
