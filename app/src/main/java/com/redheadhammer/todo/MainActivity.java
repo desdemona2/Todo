@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref;
     TextInputEditText username, password;
     CheckBox autologin;
-    Button submit, register;
+    Button submit, register, forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         setObjects();
 
         submit.setOnClickListener(this::onClick);
+        forgot.setOnClickListener(this::forgot);
     }
 
     public void onClick(View view) {
@@ -64,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void forgot(View view) {
+        Toast toast = new Toast(MainActivity.this);
+        toast.setText("Bhai ab to kuch ni ho skta! lol");
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.show();
+    }
+
     private void setObjects(){
         /* setting view objects */
         username = this.findViewById(R.id.username);
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         autologin = this.findViewById(R.id.autologin);
         submit = this.findViewById(R.id.submit);
         register = this.findViewById(R.id.register);
+        forgot = this.findViewById(R.id.forgot);
     }
 
     private boolean check(String user, String pass){

@@ -11,4 +11,9 @@
     <string name="confirm_password">confirm password</string>
     <string name="dialog_register">You won\'t be able to change this username and password. Are you sure you want to go with this</string>
     <string name="wrong_user">username or password entered is wrong</string>
+    <string name="new_task">Add New</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="title">title</string>
+    <string name="item_detail">Item Detail</string>
+    <string name="add">add</string>
 </resources>

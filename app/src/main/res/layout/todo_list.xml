@@ -7,9 +7,22 @@
     tools:context=".TodoList">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_view"
+        />
+
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
