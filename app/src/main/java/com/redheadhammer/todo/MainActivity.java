@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("LogIn");
         setContentView(R.layout.activity_login);
         sharedPref = getSharedPreferences("autologin", MODE_PRIVATE);
 
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void forgot(View view) {
         Toast toast = new Toast(MainActivity.this);
-        toast.setText("Bhai ab to kuch ni ho skta! lol");
+        toast.setText("Password Recovery not implemented yet :(");
         toast.setDuration(Toast.LENGTH_LONG);
         toast.show();
     }
